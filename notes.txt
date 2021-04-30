@@ -1,0 +1,26 @@
+constraint.pointB property from matter.constraint is used for representing the local pivot point on bodyB, i.e. the center point of any rotating system/body 
+ 
+We need to change only the second body. So, we will replace bodyB with pointB. 
+ 
+ The Bird seems to be constrained to a point now. Now the Bird is constrained to the point. But we want the bird to fly and launch itself like a projectile when we release the mouse button.  
+ 
+ Now, our bird doesn't move with the mouse. However, we want the mouse to move when the mouse is dragged on the bird. 
+ We will use a function called mouseDragged for this. This function gets invoked whenever you drag the mouse. When we drag the mouse, we will set the position of the bird to be equal to mouseX and mouseY. 
+ We use ​Matter.body.setPosition()​ to set the position of the bird body. 
+ 
+ The bird seems anchored to a point as if it is attached to a rubber band.  
+ 
+When we release the mouse, it moves to and fro but is still connected to the point. 
+ 
+We now just want to make the bird fly and detach it from the constraint when the mouse is released. 
+
+Let's quickly define Slingshot.fly inside the Slingshot class. 
+ 
+We will just change bodyA to null. Assigning null to a variable denotes that the variable currently doesn't have any value. 
+ 
+Earlier bodyA was the bird. Attaching nothing to bodyA will free the bird from the constraint. 
+ 
+ https://github.com/isha939/c28
+ 
+ 
+ 
